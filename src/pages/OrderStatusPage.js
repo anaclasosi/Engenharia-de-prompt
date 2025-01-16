@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getPaymentStatus } from '../Services/api';
+import './OrderStatusPage.css';
 
 const OrderStatusPage = ({ orderId }) => {
   const [status, setStatus] = useState('Aguardando');
@@ -18,9 +19,18 @@ const OrderStatusPage = ({ orderId }) => {
   }, [orderId]);
 
   return (
-    <div>
-      <h1>Status do Pedido</h1>
-      <p>Status: {status}</p>
+    <div className="order-status-page">
+      <div className="overlay">
+        <h1 className="title">Status do Pedido</h1>
+        <p className="status-text">
+          <strong>Status:</strong> {status}
+        </p>
+        <div className="button-container">
+          <button className="btn btn-primary" onClick={() => window.location.reload()}>
+            Atualizar Status
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
