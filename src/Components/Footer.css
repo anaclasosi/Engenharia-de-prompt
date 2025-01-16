@@ -1,0 +1,8 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+  color: #cbd5e0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}

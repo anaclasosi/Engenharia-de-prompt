@@ -1,0 +1,23 @@
+.header {
+  background-color: #2d3748;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  color: #edf2f7;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #63b3ed;
+}

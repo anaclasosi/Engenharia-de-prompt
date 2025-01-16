@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css'; // Importando o CSS
 
 const Footer = () => {
   return (
-    <footer className="mt-auto bg-gray-800 w-full py-2 text-center text-gray-400 text-sm">
-      © 2025 - Sistema de Autoatendimento Lanchonete
+    <footer className="footer">
+      <p>© 2025 - Sistema de Autoatendimento Lanchonete</p>
     </footer>
   );
 };

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'; // Importando o CSS
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 w-full py-4 text-center text-gray-400 text-lg">
-      <nav>
-        <Link to="/" className="mx-4">Home</Link>
-        <Link to="/fazer-pedido" className="mx-4">Fazer Pedido</Link>
-        <Link to="/acompanhar-pedido" className="mx-4">Acompanhar Pedido</Link>
+    <header className="header">
+      <nav className="nav">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/fazer-pedido" className="nav-link">Fazer Pedido</Link>
+        <Link to="/acompanhar-pedido" className="nav-link">Acompanhar Pedido</Link>
       </nav>
     </header>
   );
