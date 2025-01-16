@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Checkout = ({ orderDetails, onConfirmPayment }) => {
-  const [paymentLink, setPaymentLink] = useState('');
   const navigate = useNavigate();
 
   const handlePayment = () => {
     // Simulação do processo de pagamento
     const link = 'https://mercadopago.com.br/pagamento'; // Link de pagamento (real)
-    setPaymentLink(link);
     onConfirmPayment(orderDetails.id, link);
     navigate(`/checkout/${orderDetails.id}`);
   };

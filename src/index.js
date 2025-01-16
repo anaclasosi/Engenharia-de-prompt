@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css'; // Importando o CSS
 import reportWebVitals from './reportWebVitals';
 import App from './App'; // Componente principal
 import { BrowserRouter as Router } from 'react-router-dom'; // Para o roteamento
