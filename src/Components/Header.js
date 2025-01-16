@@ -1,21 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import OrderPage from '../pages/OrderPage';
-import CheckoutPage from '../pages/CheckoutPage';
-import OrderStatusPage from '../pages/OrderStatusPage';
+import { Link } from 'react-router-dom';
 
-const App = () => {
+const Header = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/order" element={<OrderPage />} />
-        <Route path="/checkout/:orderId" element={<CheckoutPage />} />
-        <Route path="/order-status" element={<OrderStatusPage />} />
-      </Routes>
-    </Router>
+    <header className="bg-gray-800 w-full py-4 text-center text-gray-400 text-lg">
+      <nav>
+        <Link to="/" className="mx-4">Home</Link>
+        <Link to="/fazer-pedido" className="mx-4">Fazer Pedido</Link>
+        <Link to="/acompanhar-pedido" className="mx-4">Acompanhar Pedido</Link>
+      </nav>
+    </header>
   );
 };
 
-export default App;
+export default Header;
