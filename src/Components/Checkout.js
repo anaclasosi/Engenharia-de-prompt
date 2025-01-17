@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Checkout.css';
 
-const Checkout = ({ orderDetails, onConfirmPayment }) => {
+const Checkout = ({ orderDetails, onConfirmPayment, onRemoveItem }) => {
   const navigate = useNavigate();
 
   const handlePayment = () => {
-    // Simulação do processo de pagamento
-    const link = 'https://mercadopago.com.br/pagamento'; // Link de pagamento (real)
+    // Simulação do processo de pagamento via QR Code do Mercado Pago
+    const link = 'https://www.mercadopago.com.br/checkout/v1/qr?preference-id=YOUR_PREFERENCE_ID'; // Link de pagamento via QR Code
     onConfirmPayment(orderDetails.id, link);
+    window.open(link, '_blank'); // Abrir o link do QR Code em uma nova aba
     navigate(`/checkout/${orderDetails.id}`);
   };
 
@@ -20,6 +22,7 @@ const Checkout = ({ orderDetails, onConfirmPayment }) => {
           {orderDetails.items.map((item, index) => (
             <li key={index} className="text-lg">
               {item.nome} - R${item.preco}
+              <button onClick={() => onRemoveItem(item)} className="ml-4 remove-button">Remover</button>
             </li>
           ))}
         </ul>
@@ -29,7 +32,7 @@ const Checkout = ({ orderDetails, onConfirmPayment }) => {
         onClick={handlePayment}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6"
       >
-        Confirmar Pagamento
+        Realizar Pagamento
       </button>
     </div>
   );

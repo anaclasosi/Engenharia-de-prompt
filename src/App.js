@@ -26,6 +26,19 @@ const App = () => {
     setOrder(newOrder);
   };
 
+  const handleRemoveFromOrder = (product) => {
+    if (!order) return;
+
+    // Remover item do pedido
+    const newOrder = { ...order };
+    const index = newOrder.items.findIndex(item => item.nome === product.nome);
+    if (index !== -1) {
+      newOrder.items.splice(index, 1);
+      newOrder.total -= product.preco;
+      setOrder(newOrder);
+    }
+  };
+
   const handleConfirmPayment = () => {
     // Lógica para confirmar o pagamento
   };
@@ -47,6 +60,8 @@ const App = () => {
           <FazerPedidoPage
             order={order}
             handleConfirmPayment={handleConfirmPayment}
+            handleAddToOrder={handleAddToOrder}
+            handleRemoveFromOrder={handleRemoveFromOrder}
           />
         } />
       </Routes>

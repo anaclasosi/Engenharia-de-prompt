@@ -4,13 +4,14 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Alterado de height para min-height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
+  position: relative; /* Alterado de fixed para relative */
   top: 0;
   left: 0;
+  overflow-y: auto; /* Adicionado para permitir rolagem */
 }
 
 .overlay {
@@ -22,6 +23,13 @@
   width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   margin: auto;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .category-container {
@@ -57,6 +65,17 @@
   margin-bottom: 10px;
 }
 
+.category-list li div:first-child {
+  font-size: 1rem; /* Reduzido de 1.2rem para 1rem */
+  font-weight: bold;
+  color: #fff;
+}
+
+.category-list li div:nth-child(2) {
+  font-size: 0.8rem; /* Reduzido de 0.9rem para 0.8rem */
+  color: #ccc;
+}
+
 .btn {
   display: inline-block;
   font-size: 1rem;
@@ -85,4 +104,11 @@
 
 .btn-secondary:hover {
   background-color: #1e7e34;
+}
+
+.checkout-section {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
