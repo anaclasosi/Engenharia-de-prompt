@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 import './PagamentoPage.css';
 
 const PagamentoPage = () => {
@@ -8,9 +10,13 @@ const PagamentoPage = () => {
 
   return (
     <div className="pagamento-page">
-      <h1 className="page-title">Pagamento</h1>
-      <p>Escaneie o QR Code abaixo para realizar o pagamento do pedido #{id}:</p>
-      <img src={qrCodeLink} alt="QR Code de Pagamento" className="qr-code" />
+      <Header />
+      <div className="content">
+        <h1 className="page-title">Pagamento</h1>
+        <p>Escaneie o QR Code abaixo para realizar o pagamento do pedido #{id}:</p>
+        <img src={qrCodeLink} alt="QR Code de Pagamento" className="qr-code" />
+      </div>
+      <Footer />
     </div>
   );
 };
