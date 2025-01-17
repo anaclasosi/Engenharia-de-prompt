@@ -25,7 +25,7 @@ const LoginPage = () => {
             type="text"
             placeholder="CPF"
             value={cpf}
-            onChange={(e) => setCpf(e.target.value)}
+            onChange={(e) => setCpf(e.target.value.replace(/\D/g, ''))} // Aceita apenas números
             required
           />
           <input
