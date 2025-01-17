@@ -12,16 +12,18 @@ const App = () => {
   const [order, setOrder] = useState(null); // Estado para armazenar o pedido
 
   const handleAddToOrder = (category, product) => {
+    let newOrder;
     if (!order) {
-      setOrder({
+      newOrder = {
         id: new Date().getTime(), // ID único para o pedido
         items: [],
         total: 0,
-      });
+      };
+    } else {
+      newOrder = { ...order };
     }
 
     // Adicionar item ao pedido
-    const newOrder = { ...order };
     newOrder.items.push(product);
     newOrder.total += product.preco;
     setOrder(newOrder);
@@ -53,7 +55,11 @@ const App = () => {
         <Route path="/acompanhar-pedido" element={
           <main className="flex flex-col items-center mt-6">
             <h1 className="text-3xl font-semibold mb-4">Status do Pedido</h1>
-            <OrderStatus status={order ? 'Recebido' : 'Aguardando'} />
+            {order && order.items.length > 0 ? (
+              <OrderStatus status="Recebido" />
+            ) : (
+              <OrderStatus status="Aguardando" />
+            )}
           </main>
         } />
         <Route path="/identificacao" element={<IdentPage />} />
