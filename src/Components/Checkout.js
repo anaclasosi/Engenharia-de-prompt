@@ -9,8 +9,7 @@ const Checkout = ({ orderDetails, onConfirmPayment, onRemoveItem }) => {
     // Simulação do processo de pagamento via QR Code do Mercado Pago
     const link = 'https://www.mercadopago.com.br/checkout/v1/qr?preference-id=YOUR_PREFERENCE_ID'; // Link de pagamento via QR Code
     onConfirmPayment(orderDetails.id, link);
-    window.open(link, '_blank'); // Abrir o link do QR Code em uma nova aba
-    navigate(`/checkout/${orderDetails.id}`);
+    navigate(`/pagamento/${orderDetails.id}`);
   };
 
   return (

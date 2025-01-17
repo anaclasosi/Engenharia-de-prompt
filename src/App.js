@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import IdentPage from './pages/IdentPage';
 import FazerPedidoPage from './pages/FazerPedidoPage';
+import PagamentoPage from './pages/PagamentoPage';
 
 const App = () => {
   const [order, setOrder] = useState(null); // Estado para armazenar o pedido
@@ -64,6 +65,7 @@ const App = () => {
             handleRemoveFromOrder={handleRemoveFromOrder}
           />
         } />
+        <Route path="/pagamento/:id" element={<PagamentoPage />} />
       </Routes>
       <Footer />
     </div>
