@@ -1,13 +1,13 @@
-.home-page {
-  background-image: url('/public/Assets/background.png'); /* Caminho corrigido da imagem de fundo */
+.fazer-pedido-page {
+  background-image: url('/public/Assets/background.png'); /* Caminho da imagem de fundo */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,28 +18,36 @@
   padding: 30px;
   border-radius: 15px;
   text-align: center;
-  max-width: 500px;
+  max-width: 90%;
   width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
 }
 
-.title {
-  font-size: 2.5rem;
+.category-title {
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
+  margin-top: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.category-title:hover {
+  color: #63b3ed;
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  color: #ddd;
   margin-bottom: 20px;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-bottom: 30px;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.category-list li {
+  margin-bottom: 10px;
 }
 
 .btn {

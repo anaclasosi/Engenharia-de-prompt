@@ -7,13 +7,10 @@ const HomePage = () => {
     <div className="home-page">
       <div className="overlay">
         <h1 className="title">Bem-vindo à Lanchonete Braseiro</h1>
-        <p className="subtitle">Faça seu cadastro ou login para continuar!</p>
+        <p className="subtitle">Onde cada mordida é um momento de felicidade!</p>
         <div className="button-container">
-          <Link to="/cadastro">
-            <button className="btn btn-primary">Cadastro</button>
-          </Link>
-          <Link to="/login">
-            <button className="btn btn-secondary">Login</button>
+          <Link to="/identificacao">
+            <button className="btn btn-primary">Identificação</button>
           </Link>
         </div>
       </div>
