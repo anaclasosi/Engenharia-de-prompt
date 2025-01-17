@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden; /* Garantir que a imagem ocupe toda a página */
 }
 
 .overlay {

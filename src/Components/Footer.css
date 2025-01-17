@@ -1,8 +1,18 @@
 .footer {
-  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
-  color: #cbd5e0;
-  padding: 1rem;
+  background-color: #1a1a1a; /* Tom de preto */
+  color: #ccc; /* Tom de cinza */
+  padding: 20px;
   text-align: center;
   font-size: 0.875rem;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+  color: #ccc; /* Tom de cinza */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #fff; /* Branco ao passar o mouse */
 }

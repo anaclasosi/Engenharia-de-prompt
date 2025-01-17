@@ -1,17 +1,35 @@
 .header {
-  background-color: #2d3748;
-  padding: 1rem;
+  background-color: #1a1a1a; /* Tom de preto */
+  color: #fff; /* Tom de branco */
+  padding: 2px 20px; /* Reduzir ainda mais o padding para diminuir a altura */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupando toda a largura da tela */
+  margin: 0 auto; /* Centralizar a barra de navegação */
+  position: relative; /* Para posicionar as faixas */
+}
+
+.header a {
+  color: #fff; /* Tom de branco */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header a:hover {
+  color: #ff6347; /* Vermelho ao passar o mouse */
 }
 
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1; /* Adicionar flex: 1 para centralizar */
 }
 
 .nav-link {
-  color: #edf2f7;
+  color: #fff; /* Tom de branco */
   margin: 0 1rem;
   text-decoration: none;
   font-size: 1.125rem;
@@ -19,5 +37,31 @@
 }
 
 .nav-link:hover {
-  color: #63b3ed;
+  color: #ff6347; /* Vermelho ao passar o mouse */
+}
+
+.logo {
+  width: 80px; /* Reduzir o tamanho da logo */
+  height: auto;
+  margin-right: auto; /* Mover a logo para o canto esquerdo */
+  margin-top: 0; /* Remover espaçamento em cima */
+  margin-bottom: 0; /* Remover espaçamento embaixo */
+}
+
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 5px; /* Largura estreita */
+  height: 100%;
+  background-color: #ff6347; /* Vermelho */
+}
+
+.header::before {
+  left: 0;
+}
+
+.header::after {
+  right: 0;
 }
