@@ -1,22 +1,25 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import { useParams, useNavigate } from 'react-router-dom';
 import './PagamentoPage.css';
+import QRCODE_Pagamento from '../Assets/QRCODE_Pagamento.png'; // Corrigir o caminho da imagem do QR Code
 
 const PagamentoPage = () => {
   const { id } = useParams();
-  const qrCodeLink = 'https://www.mercadopago.com.br/checkout/v1/qr?preference-id=YOUR_PREFERENCE_ID';
+  const navigate = useNavigate();
+
+  const handleContinue = () => {
+    navigate('/acompanhar-pedido');
+  };
 
   return (
     <div className="pagamento-page">
-      <Header />
       <div className="content">
         <h1 className="page-title">Pagamento</h1>
         <p>Escaneie o QR Code abaixo para realizar o pagamento do pedido #{id}:</p>
-        <img src={qrCodeLink} alt="QR Code de Pagamento" className="qr-code" />
+        <img src={QRCODE_Pagamento} alt="QR Code de Pagamento" className="qr-code" />
+        <p className="mt-4">Caso já tenha efetuado pagamento, continue:</p>
+        <button onClick={handleContinue} className="btn btn-primary mt-2">Continue</button>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -22,7 +22,7 @@ const OrderStatus = ({ status }) => {
   return (
     <div className="text-center">
       <h2 className="text-2xl font-bold mb-4">Status do Pedido</h2>
-      <p className="text-lg">{statusMessage}</p>
+      <p className="text-lg text-center">{statusMessage}</p>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import OrderStatus from './Components/OrderStatus';
+import OrderStatusPage from './pages/OrderStatusPage'; // Importar o componente OrderStatusPage
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import IdentPage from './pages/IdentPage';
@@ -53,14 +53,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/acompanhar-pedido" element={
-          <main className="flex flex-col items-center mt-6">
-            <h1 className="text-3xl font-semibold mb-4">Status do Pedido</h1>
-            {order && order.items.length > 0 ? (
-              <OrderStatus status="Recebido" />
-            ) : (
-              <OrderStatus status="Aguardando" />
-            )}
-          </main>
+          <OrderStatusPage orderId={order ? order.id : null} />
         } />
         <Route path="/identificacao" element={<IdentPage />} />
         <Route path="/fazer-pedido" element={
