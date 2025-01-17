@@ -57,17 +57,17 @@
 }
 
 .btn-primary {
-  background-color: #d32f2f !important; /* Vermelho mais escuro */
+  background-color: #b71c1c !important; /* Vermelho mais escuro */
 }
 
 .btn-primary:hover {
-  background-color: #b71c1c !important; /* Vermelho ainda mais escuro */
+  background-color: #8b0000 !important; /* Vermelho ainda mais escuro */
 }
 
 .btn-secondary {
-  background-color: #28a745;
+  background-color: #8b0000 !important; /* Vermelho ainda mais escuro */
 }
 
 .btn-secondary:hover {
-  background-color: #1e7e34;
+  background-color: #5c0000 !important; /* Vermelho ainda mais escuro */
 }

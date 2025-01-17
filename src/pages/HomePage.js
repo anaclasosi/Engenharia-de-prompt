@@ -12,6 +12,9 @@ const HomePage = () => {
           <Link to="/identificacao">
             <button className="btn btn-primary">Identificação</button>
           </Link>
+          <Link to="/fazer-pedido">
+            <button className="btn btn-secondary">Continuar sem Identificação</button>
+          </Link>
         </div>
       </div>
     </div>
