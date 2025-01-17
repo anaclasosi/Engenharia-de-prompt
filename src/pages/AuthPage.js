@@ -5,6 +5,11 @@ import './AuthPage.css';
 const AuthPage = () => {
   return (
     <div className="auth-page">
+      <nav className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/fazer-pedido">Fazer Pedido</Link>
+        <Link to="/acompanhar-pedido">Acompanhar Pedido</Link>
+      </nav>
       <div className="auth-container">
         <h1 className="title">Bem-vindo à Lanchonete Braseiro</h1>
         <p className="subtitle">Faça login ou cadastre-se para continuar</p>

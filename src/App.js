@@ -7,6 +7,8 @@ import Checkout from './Components/Checkout';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import AuthPage from './pages/AuthPage';
+import CadastroPage from './pages/CadastroPage';
+import LoginPage from './pages/LoginPage';
 
 const App = () => {
   const [order, setOrder] = useState(null); // Estado para armazenar o pedido
@@ -37,6 +39,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/cadastro" element={<CadastroPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/fazer-pedido" element={
           <main className="flex flex-col items-center mt-6">
             <h1 className="text-3xl font-semibold mb-4">Escolha seus produtos</h1>
